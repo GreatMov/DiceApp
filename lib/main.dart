@@ -17,6 +17,13 @@ class _ZarState extends State<Zar> {
   int zarstanga = 1;
   int zardreapta = 1;
 
+  void schimbare_zar(){
+    setState((){
+      zarstanga = Random().nextInt(6)+1;
+      zardreapta = Random().nextInt(6)+1;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -32,9 +39,7 @@ class _ZarState extends State<Zar> {
               Expanded(
                 child: TextButton(
                   onPressed: (){
-                    setState(() {
-                      zarstanga = Random().nextInt(6)+1;
-                    });
+                    schimbare_zar();
                   },
                   child: Image(
                     image: ExactAssetImage('images/$zarstanga.png'),
@@ -44,9 +49,7 @@ class _ZarState extends State<Zar> {
               Expanded(
                 child: TextButton(
                   onPressed: (){
-                    setState(() {
-                      zardreapta = Random().nextInt(6)+1;
-                    });
+                    schimbare_zar();
                   },
                   child: Image(
                     image: ExactAssetImage('images/$zardreapta.png'),
