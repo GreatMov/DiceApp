@@ -34,7 +34,6 @@ class _ZarState extends State<Zar> {
                   onPressed: (){
                     setState(() {
                       zarstanga = Random().nextInt(6)+1;
-                      zardreapta = Random().nextInt(6)+1;
                     });
                   },
                   child: Image(
