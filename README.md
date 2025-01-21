@@ -1,16 +1,41 @@
-# my_dice
+===> Instructions on working with Git <===
 
-A new Flutter project.
+We have keep the "main" branch only for production code that has been tested and is working.
+All new features will be first written in a separate branch. Preferable it should be 1 branch / feature.
 
-## Getting Started
+You should first pull the latest build. We will assume this is from the main branch:
 
-This project is a starting point for a Flutter application.
+    GIT CHECKOUT MAIN
+    GIT PULL ORIGIN MAIN
 
-A few resources to get you started if this is your first Flutter project:
+Second, create a new branch:
+    
+    GIT CHECKOUT -B <branch_name>
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+    !!! it is good practice to name the branc after the new feature it implements.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+If you want to commit the new branch:
+
+    GIT ADD .
+    GIT COMMIT -M "commit message"
+        ===> it is good practice to detail what the changes are about in the commit message
+    GIT PUSH -U ORIGIN <branch_name>
+
+If you want to verify if the branch was saved:
+
+    GIT BRANCH
+        ===> you should see your branch listed here
+    
+When the feature was fully written, you should merge the branch with main:
+
+    GIT CHECKOUT MAIN
+    GIT PULL ORIGIN MAIN
+    GIT MERGE <branch_name>
+    GIT PUSH ORIGIN MAIN
+
+After the merge, you should delete the branch locally and remote:
+
+    GIT BRANCH -d <branch_name>
+        ===> this deleted locally
+    GIT PUSH ORIGIN --delete <branch_name>
+
