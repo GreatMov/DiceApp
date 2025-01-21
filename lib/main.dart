@@ -20,11 +20,13 @@ class _ZarState extends State<Zar> {
   void schimbare_zar_stanga(){
     setState((){
       zarstanga = Random().nextInt(6)+1;
+      zardreapta = Random().nextInt(6)+1;
     });
   }
 
   void schimbare_zar_dreapta(){
     setState((){
+      zardreapta = Random().nextInt(6)+1;
       zardreapta = Random().nextInt(6)+1;
     });
   }
