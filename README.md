@@ -12,7 +12,7 @@ Second, create a new branch:
     
     GIT CHECKOUT -B <branch_name>
 
-    !!! it is good practice to name the branc after the new feature it implements.
+    !!! it is good practice to name the branch after the new feature it implements.
 
 If you want to commit the new branch:
 
